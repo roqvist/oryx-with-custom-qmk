@@ -56,9 +56,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
         case SE_LSPO:
-            return TAPPING_TERM -120;
+            return TAPPING_TERM +120;
         case SE_RSPC:
-            return TAPPING_TERM -120;
+            return TAPPING_TERM +120;
         default:
             return TAPPING_TERM;
     }
@@ -221,19 +221,4 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
         return false;
   }
   return true;
-}
-
-
-
-
-
-
-bool hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
-    switch (keycode) {
-        case KC_LSPO:
-        case KC_RSPC:
-            return true;
-        default:
-            return false;
-    }
 }
