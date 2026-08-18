@@ -223,3 +223,17 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   return true;
 }
 
+
+
+
+
+
+bool hold_on_other_key_press(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case KC_LSPO:
+        case KC_RSPC:
+            return true;
+        default:
+            return false;
+    }
+}
